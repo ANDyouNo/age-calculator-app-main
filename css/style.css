@@ -21,7 +21,14 @@
 body {
     background-color: var(--Light-grey);
 }
-
+.none {
+    display: none;
+}
+.error {
+    color: var(--Light-red);
+    text-transform: lowercase;
+    margin-left: 10px;
+}
 .container {
     max-width: 1440px;
     height: 100vh;
