@@ -26,8 +26,9 @@ body {
 }
 .error {
     color: var(--Light-red);
-    text-transform: lowercase;
-    margin-left: 10px;
+}
+.error-border {
+    border: 1px solid var(--Light-red) !important;
 }
 .container {
     max-width: 1440px;
