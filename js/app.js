@@ -41,11 +41,8 @@ function output() {
         outputs[0].innerText = parseInt(dateValues[2]) - parseInt(inputs[0].value)
         outputs[1].innerText = parseInt(dateValues[1]) - parseInt(inputs[2].value)
         outputs[2].innerText = parseInt(dateValues[0]) - parseInt(inputs[1].value)
-        console.log(parseInt(parseInt(inputs[2]) - parseInt(dateValues[0])))
     }
 }
-console.log(now)
-console.log(dateValues)
 
 
 
