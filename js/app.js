@@ -38,12 +38,13 @@ button.addEventListener('click', output)
 
 function output() {
     if (check == 1) {
-        outputs[0].innerText = parseInt(dateValues[2]) - parseInt(inputs[0].value)
-        outputs[1].innerText = parseInt(dateValues[1]) - parseInt(inputs[2].value)
-        outputs[2].innerText = parseInt(dateValues[0]) - parseInt(inputs[1].value)
+        outputs[0].innerText = parseInt(dateValues[2]) - parseInt(inputs[0].value) 
+        outputs[1].innerText = parseInt(dateValues[0]) - parseInt(inputs[1].value) 
+        outputs[2].innerText = parseInt(dateValues[1]) - parseInt(inputs[2].value) 
     }
 }
 
+console.log(dateValues)
 
 
 
