@@ -96,23 +96,13 @@ button:hover {
     background-color: var(--Off-black);
     transition: .5s;
 }
-.output-container {
-}
-.output-container p {
-}
 .output-container span {
     color: var(--Purple);
     margin-right: 20px;
 }
-.year {
-}
 .output-text {
     font-size: 66px;
     font-weight: 800;
-}
-.month {
-}
-.day {
 }
 @media screen and (max-width: 710px) {
     .input-container {
