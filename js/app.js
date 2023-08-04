@@ -9,6 +9,10 @@ let today = new Date()
 let rawDate = today.toLocaleDateString('ru')
 rawDate = rawDate.split('.')
 
+let birthdateStr = inputs[2].value + '-' + inputs[1].value + '-' + inputs[0].value
+
+console.log(birthdateStr)
+
 button.addEventListener('click', function() {
     let check = 0
     if (parseInt(inputs[0].value) > 31) {
@@ -57,10 +61,14 @@ button.addEventListener('click', function() {
             inputHeader[index].classList.remove('error')
         }
     })
-    // date format DD.MM.YY
     if (check == 0) {
-        outputs[0].innerText = parseInt(rawDate[0]) - parseInt(inputs[0].value) 
-        outputs[1].innerText = parseInt(rawDate[1]) - parseInt(inputs[1].value) 
-        outputs[2].innerText = parseInt(rawDate[2]) - parseInt(inputs[2].value) 
+        let now = new Date(),
+            birthdateStr = inputs[2].value + '-' + inputs[1].value + '-' + inputs[0].value,
+            birthdate = new Date(birthdateStr),
+            diff = now.getTime() - birthdate.getTime()
+        outputs[2].innerText = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25)) // yyyy
+        outputs[1].innerText = Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * (365.25 / 12))) //mm
+        outputs[0].innerText = Math.floor((diff % (1000 * 60 * 60 * 24 * (365.24 / 12))) / (1000 * 60 * 60 * 24)) //dd
     }        
 })
+
