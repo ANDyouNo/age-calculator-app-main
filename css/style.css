@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -46,7 +45,7 @@ body {
     /* height: 652px; */
     display: flex;
     flex-direction: column;
-    padding: 60px 52px;
+    padding: 56px 56px 40px;
     box-sizing: border-box;
     border-radius: 25px 25px 200px 25px;
 }
@@ -54,32 +53,38 @@ body {
     display: flex;
     width: 100%;
     justify-content: flex-start;
-    margin-bottom: 48px;
+    /* margin-bottom: 48px; */
 }
 .input {
     font-size: 10px;
     font-weight: 400;
     color: var(--Smokey-grey);
     text-transform: uppercase;
-    margin: 0px 16px 0px 16px;
+    margin: 0px 32px 0px 0px;
 }
 .input input {
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 800;
     width: 98px;
-    padding: 13px 15px;
+    padding: 13px 45px 13px 15px;
     border-radius: 8px;
-    border: 1px solid var(--Smokey-grey);
+    border: 1px solid var(--Light-grey);
 }
 .input input:focus {
     outline: 1px solid var(--Purple);
 }
 .input__header {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-weight: 700;
+    letter-spacing: 4px;
+    font-size: 14px;
 }
-hr {
-    margin-right: 40px;
+.hr {
+    background-color: var(--Light-grey);
+    width: 93%;
+    height: 1px;
+    position: relative;
+    top: calc(-95px/2);
 }
 button {
     background-color: var(--Purple);
@@ -88,9 +93,10 @@ button {
     width: 95px;
     height: 95px;
     position: relative;
-    left: 82%;
-    top: -50px;
+    left: 87%;
+    /* top: -50px; */
     transition: .5s;
+    z-index: 1;
 }
 button:hover {
     background-color: var(--Off-black);
@@ -101,18 +107,29 @@ button:hover {
     margin-right: 20px;
 }
 .output-text {
-    font-size: 66px;
+    font-size: 105px;
     font-weight: 800;
+    font-style: italic;
+    line-height: 1.2;
 }
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 754px) {
     .input-container {
-        margin-bottom: 64px;
+        margin-bottom: 32px;
     }
     button {
         left: 40%;
     }
+    .output-text {
+        font-size: 90px;
+    }
+    .card {
+        width: 660px;
+    }
+    .hr {
+        width: 100%;
+    }
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 685px) {
     .card {
         width: 344px;
         padding: 50px 24px;
@@ -126,21 +143,28 @@ button:hover {
     .input {
         margin: 0px 7px 0px 7px;
     }
+    .input__header {
+        letter-spacing: 2px;
+    }
     .input-container {
         justify-content: center;
+        margin-bottom: 30px;
     }
-    hr {
+    .hr {
         margin: 0;
+        top: -32px;
     }
     button {
         width: 64px;
         height: 64px;
-        top: -34px;
     }
     button img {
         width: 30px;
     }
     .output-text {
         font-size: 44px;
+    }
+    .output-container {
+        margin-top: 20px;
     }
 }
